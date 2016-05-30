@@ -1,0 +1,102 @@
+{"frames": {
+
+"wolf1.png":
+{
+	"frame": {"x":0,"y":0,"w":27,"h":20},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":27,"h":20},
+	"sourceSize": {"w":27,"h":20},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"wolf2.png":
+{
+	"frame": {"x":0,"y":20,"w":27,"h":20},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":27,"h":20},
+	"sourceSize": {"w":27,"h":20},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"wolf3.png":
+{
+	"frame": {"x":0,"y":40,"w":27,"h":20},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":27,"h":20},
+	"sourceSize": {"w":27,"h":20},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"wolf4.png":
+{
+	"frame": {"x":0,"y":60,"w":27,"h":20},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":27,"h":20},
+	"sourceSize": {"w":27,"h":20},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"wolf5.png":
+{
+	"frame": {"x":0,"y":80,"w":27,"h":20},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":27,"h":20},
+	"sourceSize": {"w":27,"h":20},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"wolfrev1.png":
+{
+	"frame": {"x":0,"y":100,"w":27,"h":20},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":27,"h":20},
+	"sourceSize": {"w":27,"h":20},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"wolfrev2.png":
+{
+	"frame": {"x":0,"y":120,"w":27,"h":20},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":27,"h":20},
+	"sourceSize": {"w":27,"h":20},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"wolfrev3.png":
+{
+	"frame": {"x":0,"y":140,"w":27,"h":20},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":27,"h":20},
+	"sourceSize": {"w":27,"h":20},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"wolfrev4.png":
+{
+	"frame": {"x":0,"y":160,"w":27,"h":20},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":27,"h":20},
+	"sourceSize": {"w":27,"h":20},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"wolfrev5.png":
+{
+	"frame": {"x":0,"y":180,"w":27,"h":20},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":27,"h":20},
+	"sourceSize": {"w":27,"h":20},
+	"pivot": {"x":0.5,"y":0.5}
+}},
+"meta": {
+	"app": "http://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "wolfSprites.png",
+	"format": "RGBA8888",
+	"size": {"w":27,"h":200},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:5bb247c29ba5691c0b49ea2ee89155d4:174806ba6d4774d5e036d24b8a4059fc:ca7c0ea99998f16d9d3e2a866ebd1fdb$"
+}
+}
