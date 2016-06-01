@@ -1,0 +1,52 @@
+[start screen]:
+  title -> "Rough Night"(Ruff night?)
+
+  credits -> "Game By: Hailey Ginther"
+
+  Controls -> "use WASD to move"
+              "Click to interact with NPCS and your surroundings!"
+              "Speak with your fellow creatures and interact with any suspicious objects!"
+              "And finish before sundown!"
+
+[intro screen]:
+  description -> "you are a werewolf recovering from a particularly crazy night out"
+                 "In the midst of your beastly revels last night you lost not only your dignity as a human"
+                 "but your keys, wallet, and clothes as well."
+                 "before the night falls, find your lost possessions"
+                 "your mother is visiting tomorrow, don't embarrass yourself in front of her"
+
+                 "good luck"
+
+[bear dialogue]:
+  ORIG -> "Oh hey man, you really went wild last night, like more than usual for a werewolf i mean"
+          Player op: "Ask about keys" "ask about wallet" "ask about clothes"
+            keys -> "you still had them when I saw you last, i dunno"
+            wallet->"dude...i think you buried it in the sand by the beach?? something about 'safe investments of your money'???"
+            clothes->"as a bear, I do not give a heck about clothes. No clue"
+  Wallet found -> "oh dude you found it, nice. Now you can pay me back finally, right?"
+        Player op: "I dont owe u s**t" "pay the bear (why would you disagree with a bear??)"
+          no-> "why you gotta be that way"
+          yes ->"thanks man. Good luck finding your other junk"
+
+[magpie dialogue]:
+  ORIG -> "Oh, its you"
+        Play op: "seen my keys?" "seen my clothes around?"
+          keys -> "hmmmmmm.,,,,maaaaybe. Too hungry to recall, really. That farmer keeps his corn well guarded"
+            (If corn.have is true) -> player.op -> "give corn bribe"
+              dialogue-> "OOOOhhh why thank you! I may have stumbled upon a wallet that may or may not be yours, here:"
+                (GET WALLET)
+                  post-dialogue -> "you got what you wanted!! get lost!!!"
+            (else: prompt: maybe some food-based persuation would help??)
+          clothes-> "I have no interest in human cloth coverings, leave me"
+
+[farmer dialogue]: "git outta here, beast!!"
+  (sheep dialouge: "haha loser", "I have pants now!!", "haha, stupid naked wolf", "I got his shirt!!")
+
+  (If farmer away: sheep: "Oh no, the wolf's coming", "I Don't Have Pants, What are Pants", ..)
+    player op: "Give me my clothes" "give me my clothes, shitlords"
+      (GET CLOTHES)
+
+[home/finish dialogue]:
+  if wallet only-> "You can't get in, you still have no keys"
+  if keys only-> "you can get in, but do you really want your mother who waits inside to see you naked??"
+  if
