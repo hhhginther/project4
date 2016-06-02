@@ -119,9 +119,13 @@ var startImage = new PIXI.Sprite(PIXI.Texture.fromImage("startImage.png"));
 startScreen.addChild(startImage);
 startImage.interactive = true;
 startImage.on('mousedown', onStartScreenClick);
-var startText =  new PIXI.Text("Click anywhere to continue",{font: '20px Calibri',
+var startText =  new PIXI.Text("Click anywhere to continue",{font: '15px Calibri',
         fill: 0xe4f1e8, align: 'center',strokeThickness: 1});
 startScreen.addChild(startText);
+var titleText = new PIXI.Text("Ruff Life:\na Short Dog Adventure",{font: '30px Calibri',
+        fill: 0xe4f1e8, align: 'center',strokeThickness: 2});
+titleText.position.set(65,100);
+startScreen.addChild(titleText);
 //info screen text
 var infoText = new PIXI.Text("You've had a rough night.\n\n\
   You've been cursed my dude,\nnow you're a dog\n\n\
@@ -148,7 +152,8 @@ var currScreen =0;
 var winScreen = new PIXI.Container();
 var endImage = new PIXI.Sprite(PIXI.Texture.fromImage("winScreen.png"));
 winScreen.addChild(endImage);
-var endText = new PIXI.Text("YOU WIN",{font: '20px Calibri',
+var endText = new PIXI.Text("You got home just in time!\n\nThanks for playing!\n\n\
+\nGame by Hailey Ginther",{font: '20px Calibri',
         fill: 0xe4f1e8, align: 'center',strokeThickness: 2});
 endText.x +=100;
 endText.y +=100;
@@ -185,12 +190,17 @@ PIXI.loader
   .add('tileset', 'tileset.png')
   .add('otherSprites.json')
   .add('wolfSprites.json')
+  .add('bgMusic.mp3')
   .load(ready);
 
 function ready() {
   tu = new TileUtilities(PIXI);
   world = tu.makeTiledWorld("map_json", "tileset.png");
   stage.addChild(world);
+
+  bgMusic = PIXI.audioManager.getAudio("bgMusic.mp3");
+  bgMusic.loop=true;
+  bgMusic.volume = 0.3;
 
   //RETRIEVING OBJECTS & DATA FROM MAP
   var entity_layer = world.getObject("entities");  // Find the entity layer
@@ -405,6 +415,8 @@ function ready() {
 function onStartScreenClick(){
   if(currScreen==0){
     infoText.visible=true;
+    titleText.visible=false;
+    bgMusic.play();
     currScreen++;
   }
   else if(currScreen==1){
